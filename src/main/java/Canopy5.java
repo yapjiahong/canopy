@@ -179,7 +179,7 @@ public class Canopy5
         if(distance<t1)
         {
           tag = tag + dataCenterNetFlow.get(centerCanopy+24)+" ";
-        }//end if (distance<0.5)   
+        }//end if (distance< t1)   
       }//end for
       String outStrings = "";
       for(int count = 0;count<=24;count++)
