@@ -123,7 +123,7 @@ public class Feature
 	      this.flow_loss = data[flowloss];
 	      this.flow_serial = data[serialnum]; 		
 		}
-		else if(data.length==(26))
+		else if(data.length==(onelineparse+1))
 		{
 	      this.timestamp = data[tp+1];
 	      this.protocol = data[proto+1];
@@ -153,8 +153,8 @@ public class Feature
 	      this.flow_bytsio = Double.parseDouble(data[fl_bytsio+1]);
 	      this.flow_ratio = Double.parseDouble(data[fl_ratio+1]);  
 
-	      this.flow_loss = data[flowloss];
-	      this.flow_serial = data[serialnum];
+	      this.flow_loss = data[flowloss+1];
+	      this.flow_serial = data[serialnum+1];
 		}
 		else
 		{
@@ -285,8 +285,8 @@ public class Feature
 		this.flow_bytsio = Double.parseDouble(temp[fl_bytsio+1]);
 		this.flow_ratio = Double.parseDouble(temp[fl_ratio+1]);  
 
-		this.flow_loss = temp[flowloss];
-		this.flow_serial = temp[serialnum];   	
+		this.flow_loss = temp[flowloss+1];
+		this.flow_serial = temp[serialnum+1];   	
 
 	}
 	
@@ -310,6 +310,6 @@ public class Feature
 
 	public void addTag(Feature f)
 	{
-		this.flow_serial = this.flow_serial + "\t" + f.flow_serial;
+		this.flow_serial = this.flow_serial + " " + f.flow_serial;
 	}	
 }
