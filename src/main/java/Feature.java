@@ -123,44 +123,6 @@ public class Feature
 	      this.flow_loss = data[flowloss];
 	      this.flow_serial = data[serialnum]; 		
 		}
-		else if(data.length==(onelineparse+1))
-		{
-	      this.timestamp = data[tp+1];
-	      this.protocol = data[proto+1];
-	      this.flow_id = data[flowid+1];
-
-	      this.foward_pkts = Double.parseDouble(data[f_pkts+1]);
-	      this.foward_byts = Double.parseDouble(data[f_byts+1]);
-	      this.foward_maxbyts = Double.parseDouble(data[f_maxbyts+1]);
-	      this.foward_minbyts = Double.parseDouble(data[f_minbyts+1]);
-	      this.foward_meanbyts = Double.parseDouble(data[f_meanbyts+1]);
-
-	      this.back_pkts = Double.parseDouble(data[b_pkts+1]);
-	      this.back_byts = Double.parseDouble(data[b_byts+1]);
-	      this.back_maxbyts = Double.parseDouble(data[b_maxbyts+1]);
-	      this.back_minbyts = Double.parseDouble(data[b_minbyts+1]);
-	      this.back_meanbyts = Double.parseDouble(data[b_meanbyts+1]);
-
-	      this.flow_pkts = Double.parseDouble(data[fl_pkts+1]);
-	      this.flow_byts = Double.parseDouble(data[fl_byts+1]);
-	      this.flow_maxbyts = Double.parseDouble(data[fl_maxbyts+1]);
-	      this.flow_minbyts = Double.parseDouble(data[fl_minbyts+1]);
-	      this.flow_meanbys = Double.parseDouble(data[fl_meanbys+1]);
-
-	      this.flow_stdbys = Double.parseDouble(data[fl_stdbys+1]);
-	      this.flow_pktsperms = Double.parseDouble(data[fl_pktsperms+1]);
-	      this.flow_bytsperms = Double.parseDouble(data[fl_bytsperms+1]);
-	      this.flow_bytsio = Double.parseDouble(data[fl_bytsio+1]);
-	      this.flow_ratio = Double.parseDouble(data[fl_ratio+1]);  
-
-	      this.flow_loss = data[flowloss+1];
-	      this.flow_serial = data[serialnum+1];
-		}
-		else
-		{
-
-		}	
-
 	}
 
 	public Feature(Feature p)
@@ -257,36 +219,36 @@ public class Feature
 	{
 		String[] temp = value.split("\t");
 
-		this.timestamp = temp[tp+1];
-		this.protocol = temp[proto+1];
-		this.flow_id = temp[flowid+1];
+		this.timestamp = temp[tp];
+		this.protocol = temp[proto];
+		this.flow_id = temp[flowid];
 
-		this.foward_pkts = Double.parseDouble(temp[f_pkts+1]);
-		this.foward_byts = Double.parseDouble(temp[f_byts+1]);
-		this.foward_maxbyts = Double.parseDouble(temp[f_maxbyts+1]);
-		this.foward_minbyts = Double.parseDouble(temp[f_minbyts+1]);
-		this.foward_meanbyts = Double.parseDouble(temp[f_meanbyts+1]);
+		this.foward_pkts = Double.parseDouble(temp[f_pkts]);
+		this.foward_byts = Double.parseDouble(temp[f_byts]);
+		this.foward_maxbyts = Double.parseDouble(temp[f_maxbyts]);
+		this.foward_minbyts = Double.parseDouble(temp[f_minbyts]);
+		this.foward_meanbyts = Double.parseDouble(temp[f_meanbyts]);
 
-		this.back_pkts = Double.parseDouble(temp[b_pkts+1]);
-		this.back_byts = Double.parseDouble(temp[b_byts+1]);
-		this.back_maxbyts = Double.parseDouble(temp[b_maxbyts+1]);
-		this.back_minbyts = Double.parseDouble(temp[b_minbyts+1]);
-		this.back_meanbyts = Double.parseDouble(temp[b_meanbyts+1]);
+		this.back_pkts = Double.parseDouble(temp[b_pkts]);
+		this.back_byts = Double.parseDouble(temp[b_byts]);
+		this.back_maxbyts = Double.parseDouble(temp[b_maxbyts]);
+		this.back_minbyts = Double.parseDouble(temp[b_minbyts]);
+		this.back_meanbyts = Double.parseDouble(temp[b_meanbyts]);
 
-		this.flow_pkts = Double.parseDouble(temp[fl_pkts+1]);
-		this.flow_byts = Double.parseDouble(temp[fl_byts+1]);
-		this.flow_maxbyts = Double.parseDouble(temp[fl_maxbyts+1]);
-		this.flow_minbyts = Double.parseDouble(temp[fl_minbyts+1]);
-		this.flow_meanbys = Double.parseDouble(temp[fl_meanbys+1]);
+		this.flow_pkts = Double.parseDouble(temp[fl_pkts]);
+		this.flow_byts = Double.parseDouble(temp[fl_byts]);
+		this.flow_maxbyts = Double.parseDouble(temp[fl_maxbyts]);
+		this.flow_minbyts = Double.parseDouble(temp[fl_minbyts]);
+		this.flow_meanbys = Double.parseDouble(temp[fl_meanbys]);
 
-		this.flow_stdbys = Double.parseDouble(temp[fl_stdbys+1]);
-		this.flow_pktsperms = Double.parseDouble(temp[fl_pktsperms+1]);
-		this.flow_bytsperms = Double.parseDouble(temp[fl_bytsperms+1]);
-		this.flow_bytsio = Double.parseDouble(temp[fl_bytsio+1]);
-		this.flow_ratio = Double.parseDouble(temp[fl_ratio+1]);  
+		this.flow_stdbys = Double.parseDouble(temp[fl_stdbys]);
+		this.flow_pktsperms = Double.parseDouble(temp[fl_pktsperms]);
+		this.flow_bytsperms = Double.parseDouble(temp[fl_bytsperms]);
+		this.flow_bytsio = Double.parseDouble(temp[fl_bytsio]);
+		this.flow_ratio = Double.parseDouble(temp[fl_ratio]);
 
-		this.flow_loss = temp[flowloss+1];
-		this.flow_serial = temp[serialnum+1];   	
+		this.flow_loss = temp[flowloss];
+		this.flow_serial = temp[serialnum];
 
 	}
 	

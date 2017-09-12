@@ -35,12 +35,7 @@ public class Normalize
   {
 
   }
-
-  public Normalize(String input)
-  {
-
-  }
-
+    
   public void fileString(String input)
   {
     String[] data = input.toString().split("\t");
